@@ -4,11 +4,9 @@
     grid-column: library-s/library-e;
 
     display: grid;
-    grid-template-rows: [title-s] 100px [title-e courses-s] repeat(
-            auto-fit,
-            1fr
-        ) [courses-e];
+    grid-template-rows:
+        [title-s] 100px [title-e courses-s] repeat(auto-fit, 1fr)
+        [courses-e];
 
-    &__title {
-    }
+    grid-row-gap: 22px;
 }
