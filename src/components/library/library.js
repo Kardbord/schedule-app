@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default class Library extends Component {
     render() {
@@ -6,6 +6,6 @@ export default class Library extends Component {
             <div className="library">
                 <h1 className="library__title">Course Library</h1>
             </div>
-        )
+        );
     }
 }

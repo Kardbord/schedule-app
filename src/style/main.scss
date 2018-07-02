@@ -1,3 +1,5 @@
+@import 'variables';
+
 .home {
     height: 100vh;
     width: 100vw;
@@ -8,11 +10,24 @@
 }
 
 .library {
-    background: coral;
     grid-column: library-s/library-e;
 }
 
 .schedule {
-    background: rebeccapurple;
+    height: 100%;
+    width: 100%;
     grid-column: schedule-s/schedule-e;
+    position: relative;
+}
+
+.gradient {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+        120deg,
+        $color-purple 0%,
+        $color-light-blue 100%
+    );
+    z-index: -10;
 }
