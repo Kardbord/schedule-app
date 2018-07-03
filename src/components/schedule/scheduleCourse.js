@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 
+
+import * as actions from '../../actions';
+
 class ScheduleCourse extends Component {
     render() {
         return (
