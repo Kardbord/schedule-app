@@ -18,7 +18,7 @@ class LibraryCourse extends Component {
         };
     }
 
-    handleCallback = function(status) {
+    handleCallback = function (status) {
         let height = this.state.height == 0 ? 'auto' : 0;
         if (!status) {
             document
@@ -40,7 +40,7 @@ class LibraryCourse extends Component {
                     <label className="library-course__title">
                         {this.props.title}
                     </label>
-                    {Icon("fas fa-check", "library-course__icon")}
+                    {this.props.enrolled ? Icon("fas fa-check", "library-course__icon") : ''}
                 </div>
                 <Arrow
                     callback={status => this.handleCallback(status)}
@@ -50,7 +50,7 @@ class LibraryCourse extends Component {
                 <Action
                     id={this.props.id}
                     onClick={() => this.props.toggleEnrolled(this.props.id)}
-                    className="library-course__action"
+                    className={`library-course__action ${this.props.enrolled ? 'action-remove' : ''}`}
                 />
 
                 <AnimateHeight
