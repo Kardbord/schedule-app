@@ -2,6 +2,7 @@
 
 .library {
     grid-column: library-s/library-e;
+    grid-row: 1/-1;
 
     display: grid;
     grid-template-rows:
@@ -11,7 +12,6 @@
 
     padding-left: 100px;
     padding-top: 100px;
-    margin-right: -50px;
 
     &__title {
         color: $color-blue;

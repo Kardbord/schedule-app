@@ -45,6 +45,8 @@
     padding-top: 12px;
     padding-bottom: 12px;
 
+    z-index: 50;
+
     &:hover {
         @include solid-course();
         .library-course__action {
