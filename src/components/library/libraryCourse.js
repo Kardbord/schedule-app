@@ -7,13 +7,12 @@ import Arrow from "../arrow";
 import Action from "../action";
 
 class LibraryCourse extends Component {
-
     constructor(props) {
         super(props);
 
         this.state = {
             status: true
-        }
+        };
     }
 
     renderDescription = function() {
@@ -28,12 +27,21 @@ class LibraryCourse extends Component {
     }.bind(this);
 
     handleCallback = function(status) {
-        this.setState({status})
+        if (!status) {
+            document
+                .getElementById("library-course")
+                .classList.add("library-course-selected");
+        } else {
+            document
+                .getElementById("library-course")
+                .classList.remove("library-course-selected");
+        }
+        this.setState({ status });
     }.bind(this);
 
     render() {
         return (
-            <div className="library-course">
+            <div id="library-course" className="library-course">
                 <div className="library-course__title-check">
                     <label className="library-course__title">
                         {this.props.title}
