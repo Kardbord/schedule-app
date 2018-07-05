@@ -10,15 +10,17 @@ class Arrow extends Component {
     }
 
     toggleArrow = function(props) {
-        document.getElementById('arrow').classList.toggle('arrow-closed');
+        this.props.callback(this.state.status);
+        document.getElementById(this.id).classList.toggle('arrow-closed');
         this.setState({ status: !this.state.status });
     }.bind(this);
 
     render() {
+        this.id = `arrow-${this.props.id}`
         return (
             <a
                 onClick={() => this.toggleArrow()}
-                id="arrow"
+                id={this.id}
                 className={`${this.props.className} arrow`}
             />
         );
